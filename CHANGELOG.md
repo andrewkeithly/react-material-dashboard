@@ -8,9 +8,8 @@
 - Updated All Packages
 - Created new README for forked project
 - Manually updated eslint package with semantic versioning to allow further upgrades
-- Reconfigured ESLint / Prettier / EditorConfig and VSCode settings
-  - Added eslint-prettier-config to ignore overlapping configurations between ESLint and Prettier
-  - Removed redundancies between editorconfig and prettierrc
+- Simplified & reconfigured ESLint / Prettier / EditorConfig and VSCode settings
+- Re-ran linter to update according to new lint rules and fixed any bugs
 - Added VSCode Settings file with Extension Recommendations, auto-fix, etc.
 
 ## [0.3.0] 2019-07-24
