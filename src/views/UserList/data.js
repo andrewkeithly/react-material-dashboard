@@ -1,4 +1,4 @@
-import uuid from 'uuid/v1';
+import uuid from 'uuid/v1'
 
 export default [
   {
@@ -140,4 +140,4 @@ export default [
     avatarUrl: '/images/avatars/avatar_10.png',
     createdAt: 1522702800000
   }
-];
+]

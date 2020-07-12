@@ -1,10 +1,10 @@
-import React from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { Typography, Button, colors } from '@material-ui/core';
+import React from 'react'
+import clsx from 'clsx'
+import PropTypes from 'prop-types'
+import { makeStyles } from '@material-ui/styles'
+import { Typography, Button, colors } from '@material-ui/core'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: colors.grey[50]
   },
@@ -25,18 +25,15 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center'
   }
-}));
+}))
 
-const UpgradePlan = props => {
-  const { className, ...rest } = props;
+const UpgradePlan = (props) => {
+  const { className, ...rest } = props
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
-    <div
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <div {...rest} className={clsx(classes.root, className)}>
       <div className={classes.media}>
         <img
           alt="Upgrade to PRO"
@@ -44,17 +41,10 @@ const UpgradePlan = props => {
         />
       </div>
       <div className={classes.content}>
-        <Typography
-          align="center"
-          gutterBottom
-          variant="h6"
-        >
+        <Typography align="center" gutterBottom variant="h6">
           Upgrade to PRO
         </Typography>
-        <Typography
-          align="center"
-          variant="body2"
-        >
+        <Typography align="center" variant="body2">
           Upgrade to Devias Kit PRO and get even more components
         </Typography>
       </div>
@@ -63,17 +53,16 @@ const UpgradePlan = props => {
           color="primary"
           component="a"
           href="https://devias.io/products/devias-kit-pro"
-          variant="contained"
-        >
+          variant="contained">
           Upgrade
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 UpgradePlan.propTypes = {
   className: PropTypes.string
-};
+}
 
-export default UpgradePlan;
+export default UpgradePlan

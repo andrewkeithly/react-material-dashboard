@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link as RouterLink, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import validate from 'validate.js';
-import { makeStyles } from '@material-ui/styles';
+import React, { useState, useEffect } from 'react'
+import { Link as RouterLink, withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import validate from 'validate.js'
+import { makeStyles } from '@material-ui/styles'
 import {
   Grid,
   Button,
@@ -12,8 +12,8 @@ import {
   FormHelperText,
   Checkbox,
   Typography
-} from '@material-ui/core';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+} from '@material-ui/core'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 
 const schema = {
   firstName: {
@@ -45,9 +45,9 @@ const schema = {
     presence: { allowEmpty: false, message: 'is required' },
     checked: true
   }
-};
+}
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.default,
     height: '100%'
@@ -138,34 +138,34 @@ const useStyles = makeStyles(theme => ({
   signUpButton: {
     margin: theme.spacing(2, 0)
   }
-}));
+}))
 
-const SignUp = props => {
-  const { history } = props;
+const SignUp = (props) => {
+  const { history } = props
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   const [formState, setFormState] = useState({
     isValid: false,
     values: {},
     touched: {},
     errors: {}
-  });
+  })
 
   useEffect(() => {
-    const errors = validate(formState.values, schema);
+    const errors = validate(formState.values, schema)
 
-    setFormState(formState => ({
+    setFormState((formState) => ({
       ...formState,
-      isValid: errors ? false : true,
+      isValid: !errors,
       errors: errors || {}
-    }));
-  }, [formState.values]);
+    }))
+  }, [formState.values])
 
-  const handleChange = event => {
-    event.persist();
+  const handleChange = (event) => {
+    event.persist()
 
-    setFormState(formState => ({
+    setFormState((formState) => ({
       ...formState,
       values: {
         ...formState.values,
@@ -178,64 +178,43 @@ const SignUp = props => {
         ...formState.touched,
         [event.target.name]: true
       }
-    }));
-  };
+    }))
+  }
 
   const handleBack = () => {
-    history.goBack();
-  };
+    history.goBack()
+  }
 
-  const handleSignUp = event => {
-    event.preventDefault();
-    history.push('/');
-  };
+  const handleSignUp = (event) => {
+    event.preventDefault()
+    history.push('/')
+  }
 
-  const hasError = field =>
-    formState.touched[field] && formState.errors[field] ? true : false;
+  const hasError = (field) =>
+    !!(formState.touched[field] && formState.errors[field])
 
   return (
     <div className={classes.root}>
-      <Grid
-        className={classes.grid}
-        container
-      >
-        <Grid
-          className={classes.quoteContainer}
-          item
-          lg={5}
-        >
+      <Grid className={classes.grid} container>
+        <Grid className={classes.quoteContainer} item lg={5}>
           <div className={classes.quote}>
             <div className={classes.quoteInner}>
-              <Typography
-                className={classes.quoteText}
-                variant="h1"
-              >
+              <Typography className={classes.quoteText} variant="h1">
                 Hella narwhal Cosby sweater McSweeney's, salvia kitsch before
                 they sold out High Life.
               </Typography>
               <div className={classes.person}>
-                <Typography
-                  className={classes.name}
-                  variant="body1"
-                >
+                <Typography className={classes.name} variant="body1">
                   Takamaru Ayako
                 </Typography>
-                <Typography
-                  className={classes.bio}
-                  variant="body2"
-                >
+                <Typography className={classes.bio} variant="body2">
                   Manager at inVision
                 </Typography>
               </div>
             </div>
           </div>
         </Grid>
-        <Grid
-          className={classes.content}
-          item
-          lg={7}
-          xs={12}
-        >
+        <Grid className={classes.content} item lg={7} xs={12}>
           <div className={classes.content}>
             <div className={classes.contentHeader}>
               <IconButton onClick={handleBack}>
@@ -243,20 +222,11 @@ const SignUp = props => {
               </IconButton>
             </div>
             <div className={classes.contentBody}>
-              <form
-                className={classes.form}
-                onSubmit={handleSignUp}
-              >
-                <Typography
-                  className={classes.title}
-                  variant="h2"
-                >
+              <form className={classes.form} onSubmit={handleSignUp}>
+                <Typography className={classes.title} variant="h2">
                   Create new account
                 </Typography>
-                <Typography
-                  color="textSecondary"
-                  gutterBottom
-                >
+                <Typography color="textSecondary" gutterBottom>
                   Use your email to create new account
                 </Typography>
                 <TextField
@@ -326,16 +296,14 @@ const SignUp = props => {
                   <Typography
                     className={classes.policyText}
                     color="textSecondary"
-                    variant="body1"
-                  >
+                    variant="body1">
                     I have read the{' '}
                     <Link
                       color="primary"
                       component={RouterLink}
                       to="#"
                       underline="always"
-                      variant="h6"
-                    >
+                      variant="h6">
                       Terms and Conditions
                     </Link>
                   </Typography>
@@ -352,20 +320,12 @@ const SignUp = props => {
                   fullWidth
                   size="large"
                   type="submit"
-                  variant="contained"
-                >
+                  variant="contained">
                   Sign up now
                 </Button>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
+                <Typography color="textSecondary" variant="body1">
                   Have an account?{' '}
-                  <Link
-                    component={RouterLink}
-                    to="/sign-in"
-                    variant="h6"
-                  >
+                  <Link component={RouterLink} to="/sign-in" variant="h6">
                     Sign in
                   </Link>
                 </Typography>
@@ -375,11 +335,11 @@ const SignUp = props => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
 SignUp.propTypes = {
   history: PropTypes.object
-};
+}
 
-export default withRouter(SignUp);
+export default withRouter(SignUp)

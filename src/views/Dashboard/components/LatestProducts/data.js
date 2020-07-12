@@ -1,5 +1,5 @@
-import uuid from 'uuid/v1';
-import moment from 'moment';
+import uuid from 'uuid/v1'
+import moment from 'moment'
 
 export default [
   {
@@ -32,4 +32,4 @@ export default [
     imageUrl: '/images/products/product_5.png',
     updatedAt: moment().subtract(9, 'hours')
   }
-];
+]

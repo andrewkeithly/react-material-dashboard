@@ -1,7 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import React from 'react'
+import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(4)
   },
@@ -10,10 +10,10 @@ const useStyles = makeStyles(theme => ({
     minHeight: 640,
     border: 0
   }
-}));
+}))
 
 const Icons = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={classes.root}>
@@ -23,7 +23,7 @@ const Icons = () => {
         title="Material Design icons"
       />
     </div>
-  );
-};
+  )
+}
 
-export default Icons;
+export default Icons

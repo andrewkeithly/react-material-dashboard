@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
+import { makeStyles } from '@material-ui/styles'
 import {
   Card,
   CardHeader,
@@ -10,39 +10,33 @@ import {
   Divider,
   Button,
   TextField
-} from '@material-ui/core';
+} from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
   root: {}
-}));
+}))
 
-const Password = props => {
-  const { className, ...rest } = props;
+const Password = (props) => {
+  const { className, ...rest } = props
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   const [values, setValues] = useState({
     password: '',
     confirm: ''
-  });
+  })
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setValues({
       ...values,
       [event.target.name]: event.target.value
-    });
-  };
+    })
+  }
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <form>
-        <CardHeader
-          subheader="Update password"
-          title="Password"
-        />
+        <CardHeader subheader="Update password" title="Password" />
         <Divider />
         <CardContent>
           <TextField
@@ -67,20 +61,17 @@ const Password = props => {
         </CardContent>
         <Divider />
         <CardActions>
-          <Button
-            color="primary"
-            variant="outlined"
-          >
+          <Button color="primary" variant="outlined">
             Update
           </Button>
         </CardActions>
       </form>
     </Card>
-  );
-};
+  )
+}
 
 Password.propTypes = {
   className: PropTypes.string
-};
+}
 
-export default Password;
+export default Password

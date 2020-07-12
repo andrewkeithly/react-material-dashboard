@@ -1,4 +1,4 @@
-import uuid from 'uuid/v1';
+import uuid from 'uuid/v1'
 
 export default [
   {
@@ -55,4 +55,4 @@ export default [
     totalDownloads: '835',
     createdAt: '04/04/2019'
   }
-];
+]

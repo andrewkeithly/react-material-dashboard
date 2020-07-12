@@ -1,8 +1,8 @@
-import React from 'react';
-import { Doughnut } from 'react-chartjs-2';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/styles';
+import React from 'react'
+import { Doughnut } from 'react-chartjs-2'
+import clsx from 'clsx'
+import PropTypes from 'prop-types'
+import { makeStyles, useTheme } from '@material-ui/styles'
 import {
   Card,
   CardHeader,
@@ -10,13 +10,13 @@ import {
   IconButton,
   Divider,
   Typography
-} from '@material-ui/core';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
-import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
-import RefreshIcon from '@material-ui/icons/Refresh';
-import TabletMacIcon from '@material-ui/icons/TabletMac';
+} from '@material-ui/core'
+import LaptopMacIcon from '@material-ui/icons/LaptopMac'
+import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone'
+import RefreshIcon from '@material-ui/icons/Refresh'
+import TabletMacIcon from '@material-ui/icons/TabletMac'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%'
   },
@@ -36,13 +36,13 @@ const useStyles = makeStyles(theme => ({
   deviceIcon: {
     color: theme.palette.icon
   }
-}));
+}))
 
-const UsersByDevice = props => {
-  const { className, ...rest } = props;
+const UsersByDevice = (props) => {
+  const { className, ...rest } = props
 
-  const classes = useStyles();
-  const theme = useTheme();
+  const classes = useStyles()
+  const theme = useTheme()
 
   const data = {
     datasets: [
@@ -59,7 +59,7 @@ const UsersByDevice = props => {
       }
     ],
     labels: ['Desktop', 'Tablet', 'Mobile']
-  };
+  }
 
   const options = {
     legend: {
@@ -81,7 +81,7 @@ const UsersByDevice = props => {
       bodyFontColor: theme.palette.text.secondary,
       footerFontColor: theme.palette.text.secondary
     }
-  };
+  }
 
   const devices = [
     {
@@ -102,13 +102,10 @@ const UsersByDevice = props => {
       icon: <PhoneIphoneIcon />,
       color: theme.palette.warning.main
     }
-  ];
+  ]
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <CardHeader
         action={
           <IconButton size="small">
@@ -120,23 +117,14 @@ const UsersByDevice = props => {
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
-          <Doughnut
-            data={data}
-            options={options}
-          />
+          <Doughnut data={data} options={options} />
         </div>
         <div className={classes.stats}>
-          {devices.map(device => (
-            <div
-              className={classes.device}
-              key={device.title}
-            >
+          {devices.map((device) => (
+            <div className={classes.device} key={device.title}>
               <span className={classes.deviceIcon}>{device.icon}</span>
               <Typography variant="body1">{device.title}</Typography>
-              <Typography
-                style={{ color: device.color }}
-                variant="h2"
-              >
+              <Typography style={{ color: device.color }} variant="h2">
                 {device.value}%
               </Typography>
             </div>
@@ -144,11 +132,11 @@ const UsersByDevice = props => {
         </div>
       </CardContent>
     </Card>
-  );
-};
+  )
+}
 
 UsersByDevice.propTypes = {
   className: PropTypes.string
-};
+}
 
-export default UsersByDevice;
+export default UsersByDevice

@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
+import React from 'react'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
+import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'inline-block',
     borderRadius: '50%',
@@ -40,12 +40,12 @@ const useStyles = makeStyles(theme => ({
   success: {
     backgroundColor: theme.palette.success.main
   }
-}));
+}))
 
-const StatusBullet = props => {
-  const { className, size, color, ...rest } = props;
+const StatusBullet = (props) => {
+  const { className, size, color, ...rest } = props
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <span
@@ -59,8 +59,8 @@ const StatusBullet = props => {
         className
       )}
     />
-  );
-};
+  )
+}
 
 StatusBullet.propTypes = {
   className: PropTypes.string,
@@ -73,11 +73,11 @@ StatusBullet.propTypes = {
     'danger'
   ]),
   size: PropTypes.oneOf(['sm', 'md', 'lg'])
-};
+}
 
 StatusBullet.defaultProps = {
   size: 'md',
   color: 'default'
-};
+}
 
-export default StatusBullet;
+export default StatusBullet

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import moment from 'moment';
-import PerfectScrollbar from 'react-perfect-scrollbar';
-import { makeStyles } from '@material-ui/styles';
+import React, { useState } from 'react'
+import clsx from 'clsx'
+import PropTypes from 'prop-types'
+import moment from 'moment'
+import PerfectScrollbar from 'react-perfect-scrollbar'
+import { makeStyles } from '@material-ui/styles'
 import {
   Card,
   CardActions,
@@ -17,11 +17,11 @@ import {
   TableRow,
   Typography,
   TablePagination
-} from '@material-ui/core';
+} from '@material-ui/core'
 
-import { getInitials } from 'helpers';
+import { getInitials } from 'helpers'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {},
   content: {
     padding: 0
@@ -39,64 +39,61 @@ const useStyles = makeStyles(theme => ({
   actions: {
     justifyContent: 'flex-end'
   }
-}));
+}))
 
-const UsersTable = props => {
-  const { className, users, ...rest } = props;
+const UsersTable = (props) => {
+  const { className, users, ...rest } = props
 
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const [selectedUsers, setSelectedUsers] = useState([]);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
-  const [page, setPage] = useState(0);
+  const [selectedUsers, setSelectedUsers] = useState([])
+  const [rowsPerPage, setRowsPerPage] = useState(10)
+  const [page, setPage] = useState(0)
 
-  const handleSelectAll = event => {
-    const { users } = props;
+  const handleSelectAll = (event) => {
+    const { users } = props
 
-    let selectedUsers;
+    let selectedUsers
 
     if (event.target.checked) {
-      selectedUsers = users.map(user => user.id);
+      selectedUsers = users.map((user) => user.id)
     } else {
-      selectedUsers = [];
+      selectedUsers = []
     }
 
-    setSelectedUsers(selectedUsers);
-  };
+    setSelectedUsers(selectedUsers)
+  }
 
   const handleSelectOne = (event, id) => {
-    const selectedIndex = selectedUsers.indexOf(id);
-    let newSelectedUsers = [];
+    const selectedIndex = selectedUsers.indexOf(id)
+    let newSelectedUsers = []
 
     if (selectedIndex === -1) {
-      newSelectedUsers = newSelectedUsers.concat(selectedUsers, id);
+      newSelectedUsers = newSelectedUsers.concat(selectedUsers, id)
     } else if (selectedIndex === 0) {
-      newSelectedUsers = newSelectedUsers.concat(selectedUsers.slice(1));
+      newSelectedUsers = newSelectedUsers.concat(selectedUsers.slice(1))
     } else if (selectedIndex === selectedUsers.length - 1) {
-      newSelectedUsers = newSelectedUsers.concat(selectedUsers.slice(0, -1));
+      newSelectedUsers = newSelectedUsers.concat(selectedUsers.slice(0, -1))
     } else if (selectedIndex > 0) {
       newSelectedUsers = newSelectedUsers.concat(
         selectedUsers.slice(0, selectedIndex),
         selectedUsers.slice(selectedIndex + 1)
-      );
+      )
     }
 
-    setSelectedUsers(newSelectedUsers);
-  };
+    setSelectedUsers(newSelectedUsers)
+  }
 
   const handlePageChange = (event, page) => {
-    setPage(page);
-  };
+    setPage(page)
+  }
 
-  const handleRowsPerPageChange = event => {
-    setRowsPerPage(event.target.value);
-  };
+  const handleRowsPerPageChange = (event) => {
+    setRowsPerPage(event.target.value)
+  }
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <CardContent className={classes.content}>
         <PerfectScrollbar>
           <div className={classes.inner}>
@@ -122,27 +119,23 @@ const UsersTable = props => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {users.slice(0, rowsPerPage).map(user => (
+                {users.slice(0, rowsPerPage).map((user) => (
                   <TableRow
                     className={classes.tableRow}
                     hover
                     key={user.id}
-                    selected={selectedUsers.indexOf(user.id) !== -1}
-                  >
+                    selected={selectedUsers.indexOf(user.id) !== -1}>
                     <TableCell padding="checkbox">
                       <Checkbox
                         checked={selectedUsers.indexOf(user.id) !== -1}
                         color="primary"
-                        onChange={event => handleSelectOne(event, user.id)}
+                        onChange={(event) => handleSelectOne(event, user.id)}
                         value="true"
                       />
                     </TableCell>
                     <TableCell>
                       <div className={classes.nameContainer}>
-                        <Avatar
-                          className={classes.avatar}
-                          src={user.avatarUrl}
-                        >
+                        <Avatar className={classes.avatar} src={user.avatarUrl}>
                           {getInitials(user.name)}
                         </Avatar>
                         <Typography variant="body1">{user.name}</Typography>
@@ -176,12 +169,12 @@ const UsersTable = props => {
         />
       </CardActions>
     </Card>
-  );
-};
+  )
+}
 
 UsersTable.propTypes = {
   className: PropTypes.string,
   users: PropTypes.array.isRequired
-};
+}
 
-export default UsersTable;
+export default UsersTable

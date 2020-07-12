@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
+import React from 'react'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
+import { makeStyles } from '@material-ui/styles'
 import {
   Card,
   CardHeader,
@@ -13,7 +13,7 @@ import {
   Checkbox,
   Typography,
   Button
-} from '@material-ui/core';
+} from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -21,18 +21,15 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column'
   }
-}));
+}))
 
-const Notifications = props => {
-  const { className, ...rest } = props;
+const Notifications = (props) => {
+  const { className, ...rest } = props
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <form>
         <CardHeader
           subheader="Manage the notifications"
@@ -40,22 +37,9 @@ const Notifications = props => {
         />
         <Divider />
         <CardContent>
-          <Grid
-            container
-            spacing={6}
-            wrap="wrap"
-          >
-            <Grid
-              className={classes.item}
-              item
-              md={4}
-              sm={6}
-              xs={12}
-            >
-              <Typography
-                gutterBottom
-                variant="h6"
-              >
+          <Grid container spacing={6} wrap="wrap">
+            <Grid className={classes.item} item md={4} sm={6} xs={12}>
+              <Typography gutterBottom variant="h6">
                 Notifications
               </Typography>
               <FormControlLabel
@@ -90,17 +74,8 @@ const Notifications = props => {
                 label="Phone calls"
               />
             </Grid>
-            <Grid
-              className={classes.item}
-              item
-              md={4}
-              sm={6}
-              xs={12}
-            >
-              <Typography
-                gutterBottom
-                variant="h6"
-              >
+            <Grid className={classes.item} item md={4} sm={6} xs={12}>
+              <Typography gutterBottom variant="h6">
                 Messages
               </Typography>
               <FormControlLabel
@@ -130,20 +105,17 @@ const Notifications = props => {
         </CardContent>
         <Divider />
         <CardActions>
-          <Button
-            color="primary"
-            variant="outlined"
-          >
+          <Button color="primary" variant="outlined">
             Save
           </Button>
         </CardActions>
       </form>
     </Card>
-  );
-};
+  )
+}
 
 Notifications.propTypes = {
   className: PropTypes.string
-};
+}
 
-export default Notifications;
+export default Notifications
