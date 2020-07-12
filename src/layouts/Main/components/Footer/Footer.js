@@ -19,14 +19,16 @@ const Footer = (props) => {
     <div {...rest} className={clsx(classes.root, className)}>
       <Typography variant="body1">
         &copy;{' '}
-        <Link component="a" href="https://devias.io/" target="_blank">
-          Devias IO
+        <Link
+          component="a"
+          href="https://andrewkeithly.github.io/"
+          target="_blank">
+          Andrew Keithly
         </Link>
-        . 2019
+        . 2020
       </Typography>
       <Typography variant="caption">
-        Created with love for the environment. By designers and developers who
-        love to work together in offices!
+        Just trying out React and Material-UI!
       </Typography>
     </div>
   )
