@@ -51,9 +51,5 @@
     "plugin:prettier/recommended",
     "prettier/standard",
     "prettier/react"
-  ],
-  "ecmaFeatures": {
-    "jsx": true,
-    "experimentalObjectRestSpread": true
-  }
+  ]
 }
