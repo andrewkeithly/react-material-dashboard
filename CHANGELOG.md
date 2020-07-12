@@ -1,5 +1,18 @@
 # Change Log
 
+## [0.4.0] 2020-07-11
+
+## Updates
+
+- Forked from [Devias's React-Material-Dashboard](https://react-material-dashboard.devias.io/dashboard)
+- Updated All Packages
+- Created new README for forked project
+- Manually updated eslint package with semantic versioning to allow further upgrades
+- Reconfigured ESLint / Prettier / EditorConfig and VSCode settings
+  - Added eslint-prettier-config to ignore overlapping configurations between ESLint and Prettier
+  - Removed redundancies between editorconfig and prettierrc
+- Added VSCode Settings file with Extension Recommendations, auto-fix, etc.
+
 ## [0.3.0] 2019-07-24
 
 ## Updates
@@ -7,8 +20,8 @@
 - Removed `services` and `data` folders, each component has its own data
 - Implemented a custom Route component to wrap views in layouts
 - Updated the layout to match with the PRO version
-- Replaced custom cumponents (Portlet) with Material-UI built-in components
-- Ajusted theme colors
+- Replaced custom components (Portlet) with Material-UI built-in components
+- Adjusted theme colors
 - Implemented `useStyle` hook instead of `withStyles` HOC
 - Moved from Class Components to Functional Components
 - Replaced dependency `classnames` with `clsx`

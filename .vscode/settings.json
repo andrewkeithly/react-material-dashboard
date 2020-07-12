@@ -1,0 +1,46 @@
+{
+  "recommendations": [
+    "msjsdiag.debugger-for-chrome",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "eamodio.gitlens"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "terminal.integrated.scrollback": 5000,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "cSpell.words": [
+    "Devias",
+    "Devias's",
+    "Escalon",
+    "Keithly",
+    "Portlet",
+    "UI's",
+    "browserslist",
+    "chartjs",
+    "clsx",
+    "editorconfig",
+    "linebreak",
+    "multiline",
+    "nfig",
+    "prettierrc",
+    "scrollbar"
+  ],
+  "cSpell.ignorePaths": [
+    "**/package-lock.json",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    ".vscode"
+  ]
+}

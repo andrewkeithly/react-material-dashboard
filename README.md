@@ -2,7 +2,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> React Dashboard made with [Material UI's](https://material-ui.com/) components, [React](https://reactjs.org/) and of course [create-react-app](https://facebook.github.io/create-react-app) & forked from [Devias's React-Material-Dashboard](https://react-material-dashboard.devias.io/dashboard)
+> React Dashboard made with [Material UI's](https://material-ui.com/) components, [React](https://reactjs.org/) via [create-react-app](https://facebook.github.io/create-react-app) originally forked from [Devias's React-Material-Dashboard](https://react-material-dashboard.devias.io/dashboard)
 
 ## Quick start
 
@@ -27,7 +27,7 @@ Within the download you'll find the following directories and files:
 ```
 material-react-dashboard
 
-├── .eslintrc
+├── .eslintrc.json
 ├── .gitignore
 ├── .prettierrc
 ├── CHANGELOG.md
@@ -56,14 +56,11 @@ material-react-dashboard
 	│	├── SignUp
 	│	├── Typography
 	│	└── UserList
-	├── App.jsx
-	├── index.jsx
-	└── Routes.jsx
+	├── App.js
+	├── App.test.js
+	├── index.js
+	└── Routes.js
 ```
-
-## Resources
-
-- More freebies like this one: <https://devias.io>
 
 ## Reporting Issues:
 
