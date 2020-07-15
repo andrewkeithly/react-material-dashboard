@@ -11,6 +11,7 @@
 - Simplified & reconfigured ESLint / Prettier / EditorConfig and VSCode settings
 - Re-ran linter to update according to new lint rules and fixed any bugs
 - Added VSCode Settings file with Extension Recommendations, auto-fix, etc.
+- Configured to deploy to github pages sub folder via [gh-pages](https://github.com/tschaub/gh-pages), reworked routing
 
 ## [0.3.0] 2019-07-24
 

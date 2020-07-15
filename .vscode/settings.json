@@ -1,13 +1,4 @@
 {
-  "recommendations": [
-    "msjsdiag.debugger-for-chrome",
-    "editorconfig.editorconfig",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "streetsidesoftware.code-spell-checker",
-    "naumovs.color-highlight",
-    "eamodio.gitlens"
-  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -44,5 +35,6 @@
     "**/vscode-extension/**",
     "**/.git/objects/**",
     ".vscode"
-  ]
+  ],
+  "files.eol": "\n"
 }
