@@ -6,7 +6,8 @@
     "esbenp.prettier-vscode",
     "streetsidesoftware.code-spell-checker",
     "naumovs.color-highlight",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "mgmcdermott.vscode-language-babel"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -14,7 +15,7 @@
   "terminal.integrated.scrollback": 5000,
   "editor.formatOnSave": true,
   "[javascript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
   "[javascriptreact]": {
     "editor.formatOnSave": false
