@@ -5,7 +5,7 @@
   "licence": "MIT",
   "version": "0.4.0",
   "private": false,
-  "homepage": "https://andrewkeithly.github.io/react-material-dashboard",
+  "homepage": "/react-material-dashboard/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
