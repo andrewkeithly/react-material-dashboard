@@ -10,5 +10,6 @@
     "plugin:prettier/recommended",
     "prettier/standard",
     "prettier/react"
-  ]
+  ],
+  "linebreak-style": ["error", "unix"]
 }
