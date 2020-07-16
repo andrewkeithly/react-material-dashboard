@@ -35,6 +35,5 @@
     "**/vscode-extension/**",
     "**/.git/objects/**",
     ".vscode"
-  ],
-  "files.eol": "\n"
+  ]
 }
