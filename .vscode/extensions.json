@@ -6,6 +6,7 @@
     "esbenp.prettier-vscode",
     "streetsidesoftware.code-spell-checker",
     "naumovs.color-highlight",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "mikestead.dotenv"
   ]
 }

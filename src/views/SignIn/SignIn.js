@@ -189,7 +189,7 @@ const SignIn = (props) => {
               </Typography>
               <div className={classes.person}>
                 <Typography className={classes.name} variant="body1">
-                  Forrest Gump
+                  Forrest Gump {/* cspell: disable-line */}
                 </Typography>
                 <Typography className={classes.bio} variant="body2">
                   Dreamer
