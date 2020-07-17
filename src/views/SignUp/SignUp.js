@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     paddingTop: theme.spacing(5),
-    paddingBototm: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2)
   },
@@ -200,15 +200,16 @@ const SignUp = (props) => {
           <div className={classes.quote}>
             <div className={classes.quoteInner}>
               <Typography className={classes.quoteText} variant="h1">
-                Hella narwhal Cosby sweater McSweeney's, salvia kitsch before
-                they sold out High Life.
+                I don't know if we each have a destiny, or if we're all just
+                floatin' around accidental-like on a breeze, but I, I think
+                maybe it's both.
               </Typography>
               <div className={classes.person}>
                 <Typography className={classes.name} variant="body1">
-                  Takamaru Ayako
+                  Forest Gump
                 </Typography>
                 <Typography className={classes.bio} variant="body2">
-                  Manager at inVision
+                  Dreamer
                 </Typography>
               </div>
             </div>

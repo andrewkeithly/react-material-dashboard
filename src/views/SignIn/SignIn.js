@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     paddingTop: theme.spacing(5),
-    paddingBototm: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2)
   },
@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
   socialIcon: {
     marginRight: theme.spacing(1)
   },
-  sugestion: {
+  suggestion: {
     marginTop: theme.spacing(2)
   },
   textField: {
@@ -185,15 +185,14 @@ const SignIn = (props) => {
           <div className={classes.quote}>
             <div className={classes.quoteInner}>
               <Typography className={classes.quoteText} variant="h1">
-                Hella narwhal Cosby sweater McSweeney's, salvia kitsch before
-                they sold out High Life.
+                My mama says that stupid is as stupid does.
               </Typography>
               <div className={classes.person}>
                 <Typography className={classes.name} variant="body1">
-                  Takamaru Ayako
+                  Forrest Gump
                 </Typography>
                 <Typography className={classes.bio} variant="body2">
-                  Manager at inVision
+                  Dreamer
                 </Typography>
               </div>
             </div>
@@ -211,10 +210,10 @@ const SignIn = (props) => {
                 <Typography className={classes.title} variant="h2">
                   Sign in
                 </Typography>
-                <Typography color="textSecondary" gutterBottom>
+                {/* <Typography color="textSecondary" gutterBottom>
                   Sign in with social media
-                </Typography>
-                <Grid className={classes.socialButtons} container spacing={2}>
+                </Typography> */}
+                {/* <Grid className={classes.socialButtons} container spacing={2}>
                   <Grid item>
                     <Button
                       color="primary"
@@ -234,14 +233,14 @@ const SignIn = (props) => {
                       Login with Google
                     </Button>
                   </Grid>
-                </Grid>
-                <Typography
+                </Grid> */}
+                {/* <Typography
                   align="center"
-                  className={classes.sugestion}
+                  className={classes.suggestion}
                   color="textSecondary"
                   variant="body1">
-                  or login with email address
-                </Typography>
+                  Login with email address
+                </Typography> */}
                 <TextField
                   className={classes.textField}
                   error={hasError('email')}
