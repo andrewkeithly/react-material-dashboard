@@ -12,7 +12,6 @@ import './assets/scss/index.scss'
 import validators from './common/validators'
 import Routes from './Routes'
 import { AuthProvider } from 'Auth'
-import PrivateRoute from './PrivateRoute'
 
 const browserHistory = createBrowserHistory({
   basename: process.env.PUBLIC_URL
@@ -33,7 +32,6 @@ export default class App extends Component {
       <ThemeProvider theme={theme}>
         <AuthProvider>
           <Router history={browserHistory}>
-            <PrivateRoute exact path="/" />
             <Routes />
           </Router>
         </AuthProvider>

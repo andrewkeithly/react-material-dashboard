@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Link as RouterLink, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import validate from 'validate.js'
@@ -14,6 +14,7 @@ import {
   Typography
 } from '@material-ui/core'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+import fbase from '../../base'
 
 const schema = {
   firstName: {
@@ -185,10 +186,21 @@ const SignUp = (props) => {
     history.goBack()
   }
 
-  const handleSignUp = (event) => {
-    event.preventDefault()
-    history.push('/')
-  }
+  const handleSignUp = useCallback(
+    async (event) => {
+      event.preventDefault()
+      const { email, password } = event.target.elements
+      try {
+        await fbase
+          .auth()
+          .createUserWithEmailAndPassword(email.value, password.value)
+        history.push('/')
+      } catch (error) {
+        alert(error)
+      }
+    },
+    [history]
+  )
 
   const hasError = (field) =>
     !!(formState.touched[field] && formState.errors[field])
@@ -206,7 +218,7 @@ const SignUp = (props) => {
               </Typography>
               <div className={classes.person}>
                 <Typography className={classes.name} variant="body1">
-                  Forest Gump
+                  Forest Gump {/* cspell: disable-line */}
                 </Typography>
                 <Typography className={classes.bio} variant="body2">
                   Dreamer
