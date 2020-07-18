@@ -6,11 +6,19 @@ export const data = {
     {
       label: 'This year',
       backgroundColor: palette.primary.main,
+      barThickness: 12,
+      maxBarThickness: 10,
+      barPercentage: 0.5,
+      categoryPercentage: 0.5,
       data: [18, 5, 19, 27, 29, 19, 20]
     },
     {
       label: 'Last year',
       backgroundColor: palette.neutral,
+      barThickness: 12,
+      maxBarThickness: 10,
+      barPercentage: 0.5,
+      categoryPercentage: 0.5,
       data: [11, 20, 12, 29, 30, 25, 13]
     }
   ]
@@ -37,10 +45,6 @@ export const options = {
   scales: {
     xAxes: [
       {
-        barThickness: 12,
-        maxBarThickness: 10,
-        barPercentage: 0.5,
-        categoryPercentage: 0.5,
         ticks: {
           fontColor: palette.text.secondary
         },
