@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink, Redirect } from 'react-router-dom'
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
@@ -7,6 +7,7 @@ import { AppBar, Toolbar, Badge, Hidden, IconButton } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import NotificationsIcon from '@material-ui/icons/NotificationsOutlined'
 import InputIcon from '@material-ui/icons/Input'
+import fbase from 'fbase'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,11 +28,21 @@ const Topbar = (props) => {
 
   const [notifications] = useState([])
 
+  const handleSignOut = async (event) => {
+    event.preventDefault()
+    try {
+      await fbase.auth().signOut()
+      return <Redirect to="/dashboard" />
+    } catch (error) {
+      alert(error)
+    }
+  }
+
   return (
     <AppBar {...rest} className={clsx(classes.root, className)}>
       <Toolbar>
         <RouterLink to="/">
-          <img alt="Logo" src="/images/logos/logo--white.svg" />
+          <img alt="Logo" src="./images/logos/logo--white.svg" />
         </RouterLink>
         <div className={classes.flexGrow} />
         <Hidden mdDown>
@@ -43,7 +54,10 @@ const Topbar = (props) => {
               <NotificationsIcon />
             </Badge>
           </IconButton>
-          <IconButton className={classes.signOutButton} color="inherit">
+          <IconButton
+            className={classes.signOutButton}
+            onClick={handleSignOut}
+            color="inherit">
             <InputIcon />
           </IconButton>
         </Hidden>

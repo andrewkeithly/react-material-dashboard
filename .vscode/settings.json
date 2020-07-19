@@ -1,14 +1,4 @@
 {
-  "recommendations": [
-    "msjsdiag.debugger-for-chrome",
-    "editorconfig.editorconfig",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "streetsidesoftware.code-spell-checker",
-    "naumovs.color-highlight",
-    "eamodio.gitlens",
-    "mgmcdermott.vscode-language-babel"
-  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -20,30 +10,46 @@
   "[javascriptreact]": {
     "editor.formatOnSave": false
   },
-  "cSpell.words": [
-    "Devias",
-    "Devias's",
-    "Escalon",
-    "Keithly",
-    "Portlet",
-    "Topbar",
-    "UI's",
-    "browserslist",
-    "chartjs",
-    "clsx",
-    "editorconfig",
-    "linebreak",
-    "multiline",
-    "nfig",
-    "predeploy",
-    "prettierrc",
-    "scrollbar"
-  ],
+  // Code Spell Checker
   "cSpell.ignorePaths": [
     "**/package-lock.json",
     "**/node_modules/**",
     "**/vscode-extension/**",
     "**/.git/objects/**",
-    ".vscode"
+    ".vscode/extensions.json"
+  ],
+  "cSpell.enabledLanguageIds": ["javascript", "javascriptreact"],
+  "cSpell.enableFiletypes": [
+    "css",
+    "editorconfig",
+    "git-commit",
+    "html",
+    "ignore",
+    "json",
+    "jsonc",
+    "jsx",
+    "jsx-attr",
+    "jsx-tags",
+    "markdown",
+    "plaintext",
+    "scss",
+    "text"
+  ],
+  "cSpell.language": "en,en-US",
+  "cSpell.words": [
+    "Keithly",
+    "Topbar",
+    "browserslist",
+    "chartjs",
+    "clsx",
+    "editorconfig",
+    "eslintignore",
+    "fbase",
+    "perfect",
+    "predeploy",
+    "prettierrc",
+    "react",
+    "react perfect scrollbar",
+    "scrollbar"
   ]
 }

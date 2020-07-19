@@ -11,5 +11,7 @@
     "prettier/standard",
     "prettier/react"
   ],
-  "linebreak-style": ["error", "unix"]
+  "rules": {
+    "linebreak-style": ["warn", "unix"]
+  }
 }

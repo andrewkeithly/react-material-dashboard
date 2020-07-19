@@ -44,7 +44,7 @@ const AccountProfile = (props) => {
     city: 'NYC',
     country: 'USA',
     timezone: 'GTM-7',
-    avatar: '/images/avatars/avatar_0.png'
+    avatar: './images/avatars/avatar_0.png'
   }
 
   return (

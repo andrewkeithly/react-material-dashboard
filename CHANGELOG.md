@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.5.0] 2020-07-19
+
+## Updates
+
+- Cleaned up a few more things for optimal (highly-opinionated) dev environment
+- Configured Firebase and added private routes
+- Updated README with Firebase instructions
+
 ## [0.4.0] 2020-07-11
 
 ## Updates
@@ -11,6 +19,7 @@
 - Simplified & reconfigured ESLint / Prettier / EditorConfig and VSCode settings
 - Re-ran linter to update according to new lint rules and fixed any bugs
 - Added VSCode Settings file with Extension Recommendations, auto-fix, etc.
+- Configured to deploy to github pages sub folder via [gh-pages](https://github.com/tschaub/gh-pages), reworked routing
 
 ## [0.3.0] 2019-07-24
 
