@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Switch, Redirect } from 'react-router-dom'
 
 import { RouteWithLayout } from './components'
-import { AuthContext } from './Auth'
+import { PrivateRoute } from './PrivateRoute'
 import { Main as MainLayout, Minimal as MinimalLayout } from './layouts'
 
 import {
@@ -19,17 +19,15 @@ import {
 } from './views'
 
 const Routes = () => {
-  const { currentUser } = useContext(AuthContext)
-
   return (
     <Switch>
       <Redirect exact from="/" to="/dashboard" />
-      {/* <RouteWithLayout
+      <PrivateRoute
         component={DashboardView}
         exact
         layout={MainLayout}
         path="/"
-      /> */}
+      />
       <RouteWithLayout
         component={DashboardView}
         exact
