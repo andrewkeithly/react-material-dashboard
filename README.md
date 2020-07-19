@@ -15,6 +15,9 @@
 - [ ] Configure testing
 - [ ] Create toggle-able themes
 - [ ] Setup to work with [Firebase!](https://firebase.google.com/)
+  - [x] Authentication with Email & Password
+  - [ ] Authentication with Google & Facebook
+  - [ ] C-R-U-D
 
 ## Quick start
 
@@ -23,6 +26,11 @@
 - Make sure your NodeJS and npm versions are up to date for `React 16.8.6`
 
 - Install dependencies: `npm install` or `yarn`
+
+- [Create Firebase Project](https://console.firebase.google.com/) & add Authentication
+
+  - Go to "Project Settings" > "General" > and grab your Firebase SDK snippet
+  - Create `.env` file and add variables matching those found in `src/fbase.js`
 
 - Start the server: `npm run start` or `yarn start`
 
@@ -35,14 +43,22 @@ The documentation for the React Material Kit is can be found [here](https://mate
 ## File Structure
 
 Within the download you'll find the following directories and files:
+(`.env` **Not Included**, you will need to create yourself – see [Quick Start](#Quick-Start))
 
 ```
 material-react-dashboard
 
+└── .vscode
+│	├── extensions.json
+│	├── launch.json
+│	└── settings.json
+├── .editorconfig
+├── .env
+├── .env.development
+├── .eslintignore
 ├── .eslintrc.json
 ├── .gitignore
 ├── .prettierrc
-├── .editorconfig
 ├── CHANGELOG.md
 ├── jsconfig.json
 ├── LICENSE.md
@@ -71,8 +87,11 @@ material-react-dashboard
 	│	└── UserList
 	├── App.js
 	├── App.test.js
+	├── Auth.js
+	├── fbase.js
 	├── index.js
 	└── Routes.js
+	└── serviceWorker.js
 ```
 
 ## Reporting Issues:
