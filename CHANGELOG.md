@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.5.0] 2020-07-19
+
+## Updates
+
+- Cleaned up a few more things for optimal (highly-opinionated) dev environment
+- Configured Firebase and added private routes
+- Updated README with Firebase instructions
+
 ## [0.4.0] 2020-07-11
 
 ## Updates

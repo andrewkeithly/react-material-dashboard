@@ -12,7 +12,7 @@ import {
   Typography
 } from '@material-ui/core'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
-import fbase from 'base'
+import fbase from 'fbase'
 import { AuthContext } from 'Auth'
 
 // import { Facebook as FacebookIcon, Google as GoogleIcon } from 'icons'
@@ -191,7 +191,7 @@ const SignIn = (props) => {
   const { currentUser } = useContext(AuthContext)
 
   if (currentUser) {
-    return <Redirect to="/" />
+    return <Redirect to="/dashboard" />
   }
 
   const hasError = (field) =>

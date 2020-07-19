@@ -42,8 +42,14 @@
     "browserslist",
     "chartjs",
     "clsx",
+    "editorconfig",
+    "eslintignore",
     "fbase",
+    "perfect",
     "predeploy",
-    "prettierrc"
+    "prettierrc",
+    "react",
+    "react perfect scrollbar",
+    "scrollbar"
   ]
 }

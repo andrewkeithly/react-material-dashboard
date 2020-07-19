@@ -14,7 +14,7 @@ import {
   Typography
 } from '@material-ui/core'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
-import fbase from '../../base'
+import fbase from '../../fbase'
 
 const schema = {
   firstName: {
