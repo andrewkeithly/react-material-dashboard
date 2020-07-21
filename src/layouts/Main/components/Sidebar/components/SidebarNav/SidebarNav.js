@@ -5,7 +5,7 @@ import { NavLink as RouterLink } from 'react-router-dom'
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
-import { List, ListItem, Button, colors } from '@material-ui/core'
+import { List, ListItem, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0
   },
   button: {
-    color: colors.blueGrey[800],
     padding: '10px 8px',
     justifyContent: 'flex-start',
     textTransform: 'none',
@@ -24,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightMedium
   },
   icon: {
-    color: theme.palette.icon,
+    // color: theme.palette.icon,
     width: 24,
     height: 24,
     display: 'flex',
@@ -32,11 +31,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1)
   },
   active: {
-    color: theme.palette.primary.main,
-    fontWeight: theme.typography.fontWeightMedium,
-    '& $icon': {
-      color: theme.palette.primary.main
-    }
+    // background: theme.palette.secondary.light
+    // color: theme.palette.primary.light
   }
 }))
 

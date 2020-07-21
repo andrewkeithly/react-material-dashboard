@@ -2,12 +2,9 @@ import React from 'react'
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
-import { Typography, Button, colors } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: colors.grey[50]
-  },
   media: {
     paddingTop: theme.spacing(2),
     height: 80,
