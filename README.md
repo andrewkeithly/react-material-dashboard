@@ -48,7 +48,7 @@ Within the download you'll find the following directories and files:
 ```
 material-react-dashboard
 
-└── .vscode
+├── .vscode
 │	├── extensions.json
 │	├── launch.json
 │	└── settings.json
@@ -57,6 +57,7 @@ material-react-dashboard
 ├── .env.development
 ├── .eslintignore
 ├── .eslintrc.json
+├── .gitattributes
 ├── .gitignore
 ├── .prettierrc
 ├── CHANGELOG.md
@@ -90,7 +91,7 @@ material-react-dashboard
 	├── Auth.js
 	├── fbase.js
 	├── index.js
-	└── Routes.js
+	├── Routes.js
 	└── serviceWorker.js
 ```
 
@@ -100,4 +101,4 @@ material-react-dashboard
 
 ## License
 
-- Licensed under MIT (https://github.com/andrewkeithly/react-material-dashboard/blob/master/LICENSE.md)
+- Licensed under [**MIT**](https://github.com/andrewkeithly/react-material-dashboard/blob/master/LICENSE.md)
