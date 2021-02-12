@@ -2,7 +2,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> React Dashboard made with [Material UI's](https://material-ui.com/) components, [React](https://reactjs.org/) via [create-react-app](https://facebook.github.io/create-react-app) originally forked from [Devias's React-Material-Dashboard](https://react-material-dashboard.devias.io/dashboard)
+> React Dashboard made with [Material UI's](https://material-ui.com/) components, [React](https://reactjs.org/) via [create-react-app](https://facebook.github.io/create-react-app) originally forked from [Devias's React-Material-Dashboard](https://react-material-dashboard.devias.io/)
 
 #### Demo
 
